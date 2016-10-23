@@ -9,18 +9,36 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Image 
-            x:Name="coverArt"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            MaxHeight="500"
-            MaxWidth="500" />
+        <SplitView IsPaneOpen="True"
+                   OpenPaneLength="300"
+                   DisplayMode="Inline">
+            <SplitView.Content>
+                <Grid>
+                    <Image 
+                        x:Name="coverArt"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        MaxHeight="500"
+                        MaxWidth="500" />
 
-        <MediaPlayerElement 
-            AreTransportControlsEnabled="True"
-            x:Name="mpe"
-            PosterSource="Images\The_Fifth_Season.jpg"
-            VerticalAlignment="Bottom"/>
-        
+                    <MediaPlayerElement 
+                        AreTransportControlsEnabled="True"
+                        x:Name="mpe"
+                        PosterSource="Images\The_Fifth_Season.jpg"
+                        VerticalAlignment="Bottom"/>
+                </Grid>
+            </SplitView.Content>
+            <SplitView.Pane>
+                <StackPanel Margin="20">
+                    <TextBlock Text="Now Playing" FontSize="30" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Library" FontSize="30" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Details" FontSize="30" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Stats" FontSize="30" HorizontalAlignment="Left"/>
+                    <TextBlock Text="About" FontSize="30" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Settings" FontSize="30" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+
     </Grid>
 </Page>
