@@ -8,6 +8,7 @@ using Windows.Foundation.Collections;
 using Windows.Media;
 using Windows.Media.Core;
 using Windows.Media.Playback;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,6 +33,42 @@ namespace AudioBook
 
             coverArt.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/The_Fifth_Season.jpg"));
             mpe.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Audio/Terra_in_Black.mp3"));
+        }
+
+        private async void nowPlaying_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("You clicked Now Playing.");
+            await dialog.ShowAsync();
+        }
+
+        private async void library_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("You clicked Library.");
+            await dialog.ShowAsync();
+        }
+
+        private async void details_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("You clicked Details.");
+            await dialog.ShowAsync();
+        }
+
+        private async void stats_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("You clicked Stats.");
+            await dialog.ShowAsync();
+        }
+
+        private async void about_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("You clicked About.");
+            await dialog.ShowAsync();
+        }
+
+        private async void settings_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("You clicked Settings.");
+            await dialog.ShowAsync();
         }
     }
 }

@@ -30,12 +30,12 @@
             </SplitView.Content>
             <SplitView.Pane>
                 <StackPanel Margin="20">
-                    <TextBlock Text="Now Playing" FontSize="30" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Library" FontSize="30" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Details" FontSize="30" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Stats" FontSize="30" HorizontalAlignment="Left"/>
-                    <TextBlock Text="About" FontSize="30" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Settings" FontSize="30" HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="nowPlaying" Text="Now Playing" FontSize="30" HorizontalAlignment="Left" Tapped="nowPlaying_Tapped"/>
+                    <TextBlock x:Name="library" Text="Library" FontSize="30" HorizontalAlignment="Left" Tapped="library_Tapped"/>
+                    <TextBlock x:Name="details" Text="Details" FontSize="30" HorizontalAlignment="Left" Tapped="details_Tapped"/>
+                    <TextBlock x:Name="stats" Text="Stats" FontSize="30" HorizontalAlignment="Left" Tapped="stats_Tapped"/>
+                    <TextBlock x:Name="about" Text="About" FontSize="30" HorizontalAlignment="Left" Tapped="about_Tapped"/>
+                    <TextBlock x:Name="settings" Text="Settings" FontSize="30" HorizontalAlignment="Left" Tapped="settings_Tapped"/>
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
